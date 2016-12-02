@@ -53,6 +53,7 @@ public class SaveActivity extends Activity {
         }
 
         if (fileLeft <= 0) {
+            showTip("不支持的类型");
             finish();
         }
     }
@@ -84,6 +85,7 @@ public class SaveActivity extends Activity {
         final EditText fileNameEdit = new EditText(this);
         final String[] uriSplit = uri.toString().split("/");
         final String defaultName = Uri.decode(uriSplit[uriSplit.length - 1]);
+        fileNameEdit.setText(defaultName);
         fileNameEdit.setHint(defaultName);
 
         new AlertDialog.Builder(this)
@@ -170,6 +172,9 @@ public class SaveActivity extends Activity {
         }
     }
 
+    /**
+     * 是否允许此项权限
+     */
     private boolean permit(final String permission) {
         return ContextCompat.checkSelfPermission(this, permission)
                 == PackageManager.PERMISSION_GRANTED;
