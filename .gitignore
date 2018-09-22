@@ -9,6 +9,8 @@
 .externalNativeBuild
 /projectFilesBackup
 .idea/*
+app/release/*
+*.apk
 
 # Windows thumbnail db
 Thumbs.db
