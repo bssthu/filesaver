@@ -1,23 +1,18 @@
 *.iml
-.gradle
+.gradle/
+.kotlin/
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
+/.idea/
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-/projectFilesBackup
-.idea/*
-app/release/*
+**/build/
+/captures/
+.externalNativeBuild/
+.cxx/
 *.apk
-
-# Windows thumbnail db
+*.ap_
+*.aab
+*.jks
+*.keystore
 Thumbs.db
-
-# OSX files
-.DS_Store
-
-# Linux files
 *~
 *.swp
